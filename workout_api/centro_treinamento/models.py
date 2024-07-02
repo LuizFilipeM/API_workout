@@ -1,6 +1,9 @@
 from sqlalchemy import Integer, String
-from workout_api.contrib.models import BaseModel
-from sqlalchemy.orm import Mapped, mapped_column, relantionship
+from contrib.models import BaseModel
+from sqlalchemy.orm import Mapped, mapped_column, relationship
+
+from atletas.models import AtletaModel
+
 
 class CentroTreinamentoModel(BaseModel):
     __tablename__= 'centros_treinamento'
@@ -8,4 +11,4 @@ class CentroTreinamentoModel(BaseModel):
     nome:Mapped[str] = mapped_column(String(50), unique = True, nullable=False)
     endereco:Mapped[str] = mapped_column(String(60), nullable=False)
     proprietario:Mapped[str] = mapped_column(String(50), nullable=False)
-    categoria: Mapped['AtletaModel'] = relantionship(back_populates='centros_treinamento')
+    atleta: Mapped['AtletaModel'] = relationship(back_populates='centro_treinamento')
