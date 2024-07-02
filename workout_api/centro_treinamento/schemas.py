@@ -2,7 +2,7 @@
 from typing import Annotated
 
 from pydantic import Field
-from workout_api.contrib.schemas import BaseSchema
+from contrib.schemas import BaseSchema
 
 
 class CentroTreinamento(BaseSchema):
