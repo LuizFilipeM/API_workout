@@ -5,15 +5,16 @@ Revises: cac6406fa02a
 Create Date: 2024-06-29 15:37:49.588593
 
 """
+
 from typing import Sequence, Union
 
-from alembic import op
 import sqlalchemy as sa
 
+from alembic import op
 
 # revision identifiers, used by Alembic.
-revision: str = '5c0e8fe2e164'
-down_revision: Union[str, None] = 'cac6406fa02a'
+revision: str = "5c0e8fe2e164"
+down_revision: Union[str, None] = "cac6406fa02a"
 branch_labels: Union[str, Sequence[str], None] = None
 depends_on: Union[str, Sequence[str], None] = None
 
